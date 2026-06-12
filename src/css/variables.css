@@ -1,0 +1,74 @@
+/* ==========================================================================
+   VARIABLES
+   Toutes les valeurs du projet sont définies ici.
+   C'est le premier fichier à modifier pour changer l'identité visuelle.
+   ========================================================================== */
+
+:root {
+   /* --------------------------------------------------------------------------
+     COULEURS
+     -------------------------------------------------------------------------- */
+
+   --color-white: #fff;
+   --color-black: #000;
+   --color-bg: #fff; /* Fond de page — noir profond par défaut */
+   --color-text: #000; /* Texte principal */
+   --color-accent: #e63946; /* Couleur d'accent */
+
+   /* --------------------------------------------------------------------------
+     TYPOGRAPHIE — Familles
+     Charger les polices dans index.html (Google Fonts ou fichier local)
+     -------------------------------------------------------------------------- */
+
+   --font-display: 'Georgia', serif; /* Titres principaux */
+   --font-body: system-ui, sans-serif; /* Corps de texte */
+
+   /* --------------------------------------------------------------------------
+     TYPOGRAPHIE — Échelle de taille
+     -------------------------------------------------------------------------- */
+
+   --text-smaller: 12px; /* micro-texte, crédits */
+   --text-small: 14px; /*  captions, notes */
+   --text-regular: 16px; /* corps de texte */
+   --text-medium: 18px; /* corps large, intro */
+   --text-large: 24px; /*  sous-titres */
+   --text-larger: 32px; /* titres de section */
+   --text-xtra-large: 64px; /*  grands titres */
+
+   /* --------------------------------------------------------------------------
+     TYPOGRAPHIE — Interlignage
+     -------------------------------------------------------------------------- */
+
+   --line-height-tight: 1.1; /* Titres serrés */
+   --line-height-body: 1.25; /* Corps de texte confortable */
+   --line-height-loose: 2; /* Texte aéré */
+
+   /* --------------------------------------------------------------------------
+     ESPACEMENT
+     Système d'espacement en multiples de 8px.
+     -------------------------------------------------------------------------- */
+
+   --space-4: 4px;
+   --space-8: 8px;
+   --space-12: 12px;
+   --space-16: 16px;
+   --space-24: 24px;
+   --space-32: 32px;
+   --space-48: 48px;
+   --space-64: 64px;
+   --space-96: 96px;
+   --space-128: 128px;
+
+   /* --------------------------------------------------------------------------
+     LAYOUT — Largeurs de conteneur
+     -------------------------------------------------------------------------- */
+
+   --container-width: 1320px;
+
+   /* --------------------------------------------------------------------------
+     SECTIONS
+     Hauteur minimale d'une section plein écran
+     -------------------------------------------------------------------------- */
+
+   --section-min-height: 100svh;
+}

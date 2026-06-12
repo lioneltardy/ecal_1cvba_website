@@ -1,0 +1,181 @@
+/* ==========================================================================
+   TYPOGRAPHY
+   Styles de base pour tous les éléments texte.
+   Modifier les variables dans variables.css pour changer l'identité visuelle.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   TITRES
+   -------------------------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  line-height: var(--line-height-tight);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: var(--text-xtra-large);
+}
+h2 {
+  font-size: var(--text-larger);
+}
+h3 {
+  font-size: var(--text-large);
+}
+h4 {
+  font-size: var(--text-medium);
+}
+
+/* --------------------------------------------------------------------------
+   CORPS DE TEXTE
+   -------------------------------------------------------------------------- */
+
+p {
+  font-family: var(--font-body);
+  font-size: var(--text-regular);
+  line-height: var(--line-height-body);
+  max-width: 65ch; /* Largeur de lecture optimale */
+}
+
+/* Texte d'introduction — plus grand que le corps */
+.lead {
+  font-size: var(--text-large);
+  line-height: var(--line-height-body);
+  font-weight: 400;
+  max-width: 55ch;
+}
+
+/* Caption / légende — sous les images, les vidéos */
+.caption {
+  font-size: var(--text-small);
+  line-height: var(--line-height-body);
+  letter-spacing: 0.04em;
+}
+
+/* Label / étiquette — catégorie, section, tag */
+.label {
+  font-size: var(--text-small);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+}
+
+/* Typographie décorative — très grande, peut dépasser l'écran */
+.display {
+  font-family: var(--font-display);
+  font-size: var(--text-xtra-large);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+}
+
+/* Liste de données clé / valeur (fiche technique) */
+.data-list {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-16) var(--space-32);
+}
+
+.data-list dt {
+  font-family: var(--font-mono);
+  font-size: var(--text-small);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding-top: 0.2em; /* Alignement optique avec la valeur */
+}
+
+.data-list dd {
+  font-family: var(--font-body);
+  font-size: var(--text-regular);
+}
+
+/* --------------------------------------------------------------------------
+   ÉLÉMENTS INLINE
+   -------------------------------------------------------------------------- */
+
+strong,
+b {
+  font-weight: 700;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+/* --------------------------------------------------------------------------
+   UTILITAIRES TEXTE
+   -------------------------------------------------------------------------- */
+
+.text-white {
+  color: var(--color-white);
+}
+
+.text-black {
+  color: var(--color-black);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-upper {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.text-italic {
+  font-style: italic;
+}
+.text-bold {
+  font-weight: 700;
+}
+
+/* Taille de texte utilitaires */
+.text-smaller {
+  font-size: var(--text-small);
+}
+
+.text-small {
+  font-size: var(--text-small);
+}
+
+.text-regular {
+  font-size: var(--text-regular);
+}
+
+.text-medium {
+  font-size: var(--text-medium);
+}
+
+.text-large {
+  font-size: var(--text-large);
+}
+
+.text-larger {
+  font-size: var(--text-larger);
+}
+
+.text-xtra-large {
+  font-size: var(--text-xtra-large);
+}
+
+a:hover {
+  color: var(--color-accent);
+}

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ============================================================
+    TITRE — Remplacer par le titre de votre film
+  ============================================================ -->
+  <title>Titre du film — ECAL 1CVBA</title>
+
+  <!-- ============================================================
+    POLICES — Charger vos polices Google Fonts ici
+    Exemple : deux polices, une pour les titres, une pour le corps
+    Trouver des paires sur https://fonts.google.com
+  ============================================================ -->
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet"> -->
+
+  <!-- ============================================================
+    CSS — Le framework, puis votre CSS personnalisé
+    Ne pas modifier framework.css — travailler dans style.css
+  ============================================================ -->
+  <link rel="stylesheet" href="src/css/framework.css">
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body>
+
+  <!-- ============================================================
+    NAVIGATION FIXE
+    Reste visible pendant le défilement.
+    Contient le titre du film et des ancres vers les sections.
+    Utiliser position: fixed + z-nav dans style.css
+  ============================================================ -->
+  <nav class="position-fixed top-0 w-100 z-nav bg-white">
+    <div class="container d-flex justify-between py-16">
+
+      <!-- Logo ou titre court -->
+      <a href="#poster" class="label">Titre du film</a>
+
+      <!-- Ancres de navigation — chaque href pointe vers un id de section -->
+      <ul class="d-flex">
+        <li><a href="#synopsis" class="label mr-8">Synopsis</a></li>
+        <li><a href="#personnages" class="label mx-8">Personnages</a></li>
+        <li><a href="#realisation" class="label mx-8">Réalisation</a></li>
+        <li><a href="#reception" class="label ml-8">Réception</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+    SECTION 1 — POSTER
+    Traiter comme une affiche : elle doit donner envie de lire la suite.
+    Peut contenir : titre, année, image de fond, accroche visuelle.
+    Occupe tout l'écran : utiliser section-full.
+  ============================================================ -->
+  <section id="poster" class="section h-screen d-flex justify-center items-center">
+
+    <!-- Contenu centré -->
+    <div class="w-fit h-fit text-center bg-white p-32">
+      <h1 class="display mb-32">Titre du Film</h1>
+      <p class="lead">Tagline ou phrase d'accroche du film</p>
+      <span class="label mt-8">1985 · Dir. Prénom Nom</span>
+    </div>
+
+    <!-- Indicateur de défilement -->
+    <div class="position-absolute bottom-0 w-100 text-center pb-32">
+      <span class="label">Défiler ↓</span>
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+    SECTION 2 — FICHE TECHNIQUE
+    Informations factuelles sur le film : une liste structurée.
+    Utiliser la classe data-list pour les paires clé / valeur.
+    Cette section peut être plus petite qu'un écran.
+  ============================================================ -->
+  <section id="fiche" class="section d-flex items-center h-screen bg-black py-64 text-white">
+    <div class="container columns-4-8 gap-16 h-fit">
+      <!-- Colonne gauche : titre de section -->
+      <div>
+        <p class="label mb-8 block">01 — Fiche technique</p>
+        <h2>Le film en détail</h2>
+      </div>
+
+      <!-- Colonne droite : données -->
+      <dl class="data-list">
+        <dt>Titre original</dt>
+        <dd>Original Title</dd>
+
+        <dt>Réalisation</dt>
+        <dd>Prénom Nom du réalisateur</dd>
+
+        <dt>Scénario</dt>
+        <dd>Prénom Nom du scénariste</dd>
+
+        <dt>Pays</dt>
+        <dd>États-Unis</dd>
+
+        <dt>Année</dt>
+        <dd>1982</dd>
+
+        <dt>Durée</dt>
+        <dd>1h 57min</dd>
+
+        <dt>Genre</dt>
+        <dd>Science-fiction, Thriller</dd>
+
+        <dt>Budget</dt>
+        <dd>28 000 000 $</dd>
+
+        <dt>Box-office</dt>
+        <dd>33 800 000 $</dd>
+      </dl>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+    SECTION 3 — SYNOPSIS
+    Résumé du film. Peut être traité en texte pur, avec des images,
+    ou en combinant les deux. Privilégier un texte concis et bien découpé.
+  ============================================================ -->
+  <section id="synopsis" class="section py-64">
+    <div class="container">
+
+      <p class="label mb-8">02 — Synopsis</p>
+      <h2 class="mb-6">L'histoire</h2>
+
+      <p class="lead mb-32">Paragraphe d'introduction — l'accroche du synopsis. Quelques phrases qui donnent envie d'en savoir plus.</p>
+      <p class="mb-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p class="mb-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p class="mb-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p class="mb-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p class="mb-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p class="mb-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+    SECTION 4 — DISTRIBUTION
+    Acteurs et actrices. Traiter en texte ou en image.
+    Exemple ci-dessous : grille de portraits.
+  ============================================================ -->
+  <section id="distribution" class="section bg-black text-white py-64">
+    <div class="container">
+
+      <span class="label mb-6 block">03 — Distribution</span>
+      <h2 class="mb-64">Les acteurs</h2>
+
+      <!-- Grille de portraits — adapter le nombre de colonnes -->
+      <div class="columns-4-4-4 gap-32">
+
+        <!-- Répéter ce bloc pour chaque acteur / actrice -->
+        <article>
+          <div class="ratio-1-1 overflow-hidden mb-8">
+            <img src="/assets/images/pattern.svg" alt="Prénom Nom" class="w-100">
+          </div>
+          <h4 class="mb-1">Prénom Nom</h4>
+          <p class="caption">Rôle du personnage</p>
+        </article>
+
+        <article>
+          <div class="ratio-1-1 overflow-hidden mb-8">
+            <img src="/assets/images/pattern.svg" alt="Prénom Nom" class="w-100">
+          </div>
+          <h4 class="mb-1">Prénom Nom</h4>
+          <p class="caption">Rôle du personnage</p>
+        </article>
+
+        <article>
+          <div class="ratio-1-1 overflow-hidden mb-8">
+            <img src="/assets/images/pattern.svg" alt="Prénom Nom" class="w-100">
+          </div>
+          <h4 class="mb-1">Prénom Nom</h4>
+          <p class="caption">Rôle du personnage</p>
+        </article>
+
+        <article>
+          <div class="ratio-1-1 overflow-hidden mb-8">
+            <img src="/assets/images/pattern.svg" alt="Prénom Nom" class="w-100">
+          </div>
+          <h4 class="mb-1">Prénom Nom</h4>
+          <p class="caption">Rôle du personnage</p>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+    SECTION 5 — PERSONNAGES
+    Biographies et informations sur les protagonistes.
+    Peut alterner texte gauche / image droite, puis image gauche / texte droite.
+  ============================================================ -->
+  <section id="personnages" class="section py-64">
+    <div class="container">
+
+      <p class="label mb-8">04 — Personnages</p>
+      <h2 class="mb-32">Les protagonistes</h2>
+
+      <!-- Personnage 1 : texte à gauche, image à droite -->
+      <div class="columns-9-3 gap-32 items-center mb-32">
+        <div>
+          <h3 class="mb-4">Nom du personnage</h3>
+          <p class="lead mb-4">Courte description du personnage et de son rôle dans l'histoire.</p>
+          <p>Développement plus détaillé : motivations, arc narratif, relations avec les autres personnages.</p>
+        </div>
+        <figure>
+          <img src="assets/images/pattern.svg" alt="Nom du personnage" class="w-100">
+          <figcaption class="caption mt-8">Légende</figcaption>
+        </figure>
+      </div>
+
+      <!-- Personnage 2 : texte à gauche, image à droite -->
+      <div class="columns-3-9 gap-32 items-center mb-32">
+        <figure>
+          <img src="assets/images/pattern.svg" alt="Nom du personnage" class="w-100">
+          <figcaption class="caption mt-8">Légende</figcaption>
+        </figure>
+        <div>
+          <h3 class="mb-4">Nom du personnage</h3>
+          <p class="lead mb-4">Courte description du personnage et de son rôle dans l'histoire.</p>
+          <p>Développement plus détaillé : motivations, arc narratif, relations avec les autres personnages.</p>
+        </div>
+      </div>
+
+      <!-- Personnage 3 : texte à gauche, image à droite -->
+      <div class="columns-9-3 gap-32 items-center mb-32">
+        <div>
+          <h3 class="mb-4">Nom du personnage</h3>
+          <p class="lead mb-4">Courte description du personnage et de son rôle dans l'histoire.</p>
+          <p>Développement plus détaillé : motivations, arc narratif, relations avec les autres personnages.</p>
+        </div>
+        <figure>
+          <img src="assets/images/pattern.svg" alt="Nom du personnage" class="w-100">
+          <figcaption class="caption mt-8">Légende</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    SECTION FIN —
+    Clôture du site. Obligatoire.
+  ============================================================ -->
+  <footer class="section h-screen d-flex justify-center items-center bg-black text-white py-64">
+
+    <h2 class="display mb-8">Titre du Film</h2>
+
+    <div class="d-flex justify-center position-absolute bottom-0 left-0 w-100 pb-32 text-small">
+      <p>Cours de webdesign — ECAL</p>
+      <p>1ère année Bachelor, 2026–2027</p>
+      <p>Réalisé par: Prénom Nom</p>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
