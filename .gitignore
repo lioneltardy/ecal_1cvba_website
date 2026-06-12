@@ -1,0 +1,9 @@
+vendor
+node_modules
+.DS_Store
+*.log
+*.sql
+*.sqlite
+dist
+composer.lock
+package-lock.json
