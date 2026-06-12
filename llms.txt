@@ -14,6 +14,7 @@ Le site a été **conçu au préalable dans Figma** (maquette graphique complèt
 - **Zéro framework externe.** Ne pas importer Tailwind, Bootstrap, GSAP, ScrollMagic, Alpine.js, React ou toute autre librairie. Le projet utilise uniquement le framework CSS fourni.
 - **Vanilla HTML/CSS uniquement.** Un seul fichier HTML (`index.html`), un fichier CSS personnalisé (`src/css/style.css`), le framework CSS fourni.
 - **Ne pas modifier les fichiers du framework.** Les fichiers `reset.css`, `variables.css`, `layout.css`, `typography.css` et `framework.css` sont en lecture seule. Toute personnalisation se fait dans `src/css/style.css`.
+- **Utiliser d'abord les classes utilitaires du framework.** Avant d'écrire du CSS personnalisé, appliquer au maximum les classes existantes dans le HTML (`d-flex`, `text-large`, `gap-*`, etc.). N'ajouter dans `style.css` que les règles spéciales absentes du framework.
 
 ---
 
@@ -196,6 +197,9 @@ Le site est oganisé en sections verticales, chacune correspondant à une partie
 
 - **HTML sémantique :** utiliser les balises appropriées (`<section>`, `<article>`, `<figure>`, `<figcaption>`, `<nav>`, `<footer>`, `<dl>`, `<dt>`, `<dd>`, `<blockquote>`, `<cite>`)
 - **Variables CSS :** toujours utiliser les variables `--space-*` pour les espacements, ou les classes liées (p-*, mx-*, etc.), jamais de valeurs brutes comme `margin: 24px`
+- **Priorité aux classes utilitaires :** avant d'écrire du CSS personnalisé, utiliser au maximum les classes déjà disponibles dans le framework (`d-flex`, `text-large`, `gap-*`, etc.) directement dans le HTML
+- **CSS personnalisé minimal :** n'ajouter dans `style.css` que les règles spéciales absentes du framework (ex: effets spécifiques, exceptions de layout, ajustements liés à la maquette)
+- **Pas de redondance utilitaire/CSS :** ne pas réécrire en CSS une règle déjà exprimable avec une classe utilitaire existante
 - **Commentaires :** commenter chaque bloc CSS avec le nom de la section concernée
 - **Styles inline :** éviter les `style=""` dans le HTML sauf cas exceptionnel justifié
 
