@@ -1,0 +1,35 @@
+<svg viewBox="0 0 640 280" xmlns="http://www.w3.org/2000/svg" font-family="'Courier New', monospace">
+
+  <!-- Fond -->
+  <rect width="640" height="280" fill="#f8f8f8"/>
+
+  <!-- Niveau 1 : section -->
+  <rect x="32" y="32" width="576" height="216" rx="8" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <text x="52" y="27" font-size="13" fill="#3b82f6" font-family="system-ui, sans-serif">section</text>
+
+  <!-- Niveau 2 : div.container -->
+  <rect x="64" y="52" width="512" height="176" rx="6" fill="none" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="84" y="47" font-size="13" fill="#8b5cf6" font-family="system-ui, sans-serif">div.container</text>
+
+  <!-- Niveau 3a : h2 -->
+  <rect x="96" y="72" width="180" height="44" rx="4" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="186" y="99" text-anchor="middle" font-size="15" fill="#15803d">&lt;h2&gt;Synopsis&lt;/h2&gt;</text>
+
+  <!-- Niveau 3b : p -->
+  <rect x="96" y="132" width="448" height="76" rx="4" fill="#fef9c3" stroke="#eab308" stroke-width="1.5"/>
+  <text x="103" y="155" font-size="13" fill="#854d0e">&lt;p&gt;</text>
+  <!-- Niveau 4 : em à l'intérieur de p -->
+  <rect x="130" y="163" width="140" height="32" rx="3" fill="#fde68a" stroke="#d97706" stroke-width="1"/>
+  <text x="200" y="183" text-anchor="middle" font-size="13" fill="#92400e">&lt;em&gt;1982&lt;/em&gt;</text>
+  <text x="280" y="183" font-size="13" fill="#854d0e">&#160;par Ridley Scott</text>
+  <text x="490" y="198" font-size="13" fill="#854d0e">&lt;/p&gt;</text>
+
+  <!-- Légende -->
+  <rect x="32" y="258" width="12" height="12" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <text x="52" y="269" font-size="11" fill="#64748b" font-family="system-ui, sans-serif">Parent</text>
+  <rect x="120" y="258" width="12" height="12" fill="none" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="140" y="269" font-size="11" fill="#64748b" font-family="system-ui, sans-serif">Enfant</text>
+  <rect x="208" y="258" width="12" height="12" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="228" y="269" font-size="11" fill="#64748b" font-family="system-ui, sans-serif">Enfant de l'enfant</text>
+
+</svg>

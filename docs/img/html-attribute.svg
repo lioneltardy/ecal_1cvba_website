@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 640 200">
+  <!-- Generator: Adobe Illustrator 30.7.0, SVG Export Plug-In . SVG Version: 2.1.4 Build 114)  -->
+  <defs>
+    <style>
+      .st0, .st1, .st2, .st3, .st4, .st5 {
+        isolation: isolate;
+      }
+
+      .st0, .st1, .st4 {
+        font-family: Helvetica, Helvetica;
+        font-size: 12px;
+      }
+
+      .st0, .st5 {
+        fill: #7c3aed;
+      }
+
+      .st1 {
+        fill: #64748b;
+      }
+
+      .st6 {
+        fill: #f8f8f8;
+      }
+
+      .st7 {
+        stroke-dasharray: 4 3;
+      }
+
+      .st7, .st8, .st9, .st10 {
+        fill: none;
+      }
+
+      .st7, .st9 {
+        stroke: #94a3b8;
+      }
+
+      .st8 {
+        stroke: #7c3aed;
+      }
+
+      .st8, .st10 {
+        stroke-width: 1.5px;
+      }
+
+      .st2 {
+        fill: #1e293b;
+      }
+
+      .st2, .st3, .st5 {
+        font-family: CourierNewPSMT, 'Courier New';
+        font-size: 20px;
+      }
+
+      .st3, .st4 {
+        fill: #15803d;
+      }
+
+      .st10 {
+        stroke: #15803d;
+      }
+    </style>
+  </defs>
+  <rect class="st6" width="640" height="200"/>
+  <text class="st3" transform="translate(421 105)"><tspan x="0" y="0">&quot;Affiche&quot;</tspan></text>
+  <text class="st5" transform="translate(366 105)"><tspan x="0" y="0">alt</tspan></text>
+  <text class="st3" transform="translate(203 105)"><tspan x="0" y="0">&quot;poster.jpg&quot;</tspan></text>
+  <text class="st2" transform="translate(530.999 105)"><tspan x="0" y="0">&gt;</tspan></text>
+  <text class="st2" transform="translate(80 105)"><tspan x="0" y="0">&lt;img </tspan></text>
+  <text class="st5" transform="translate(150 105)"><tspan x="0" y="0">src</tspan></text>
+  <text class="st2" transform="translate(188 105)"><tspan x="0" y="0">=</tspan></text>
+  <text class="st2" transform="translate(352 105)"><tspan x="0" y="0"> </tspan></text>
+  <text class="st2" transform="translate(402 105)"><tspan x="0" y="0">=</tspan></text>
+  <line class="st8" x1="167" y1="115" x2="167" y2="148"/>
+  <text class="st0" transform="translate(154.332 164)"><tspan x="0" y="0">Nom</tspan></text>
+  <text class="st0" transform="translate(137.838 178)"><tspan x="0" y="0">de l&apos;attribut</tspan></text>
+  <line class="st10" x1="275" y1="115" x2="275" y2="148"/>
+  <text class="st4" transform="translate(258.099 164)"><tspan x="0" y="0">Valeur</tspan></text>
+  <line class="st7" x1="147" y1="55" x2="530" y2="55"/>
+  <line class="st9" x1="147" y1="55" x2="147" y2="67"/>
+  <line class="st9" x1="530" y1="55" x2="530" y2="67"/>
+  <text class="st1" transform="translate(315.992 45)"><tspan x="0" y="0">Attributs</tspan></text>
+</svg>

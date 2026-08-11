@@ -1,53 +1,6 @@
-/* ==========================================================================
-   STYLE.CSS — Votre CSS personnalisé
-   
-   Ce fichier est importé APRÈS le framework.
-   Vous pouvez ici :
-   - Personnaliser les variables (couleurs, polices) en les redéclarant dans :root
-   - Écrire vos propres classes CSS pour styliser vos sections
-   - Surcharger les styles du framework si nécessaire
-   
-   Ne pas modifier les fichiers du framework (reset.css, layout.css, etc.)
-   ========================================================================== */
-
-
-/* --------------------------------------------------------------------------
-   SURCHARGE DES VARIABLES
-   Redéclarer ici les variables que vous voulez personnaliser.
-   Les valeurs ci-dessous écrasent celles de variables.css.
-   -------------------------------------------------------------------------- */
-
-:root {
-  /* Exemple : changer les couleurs pour votre film */
-  /* --color-bg:     #f5f0e8; */
-  /* --color-text:   #1a1a1a; */
-  /* --color-accent: #c8341a; */
-
-  /* Exemple : changer les polices */
-  /* --font-display: 'Playfair Display', serif; */
-  /* --font-body:    'Inter', sans-serif; */
-}
-
-
-/* --------------------------------------------------------------------------
-   NAVIGATION
-   -------------------------------------------------------------------------- */
-
-/* nav {
-  background-color: ...;
-  border-bottom: ...;
-} */
-
-
-/* --------------------------------------------------------------------------
-   SECTION Poster
-   -------------------------------------------------------------------------- */
-
-#poster {
-   background-image: url('../../assets/images/pattern.svg');
-}
-
-
-/* --------------------------------------------------------------------------
-   Écrire votre CSS ici, section par section
-   -------------------------------------------------------------------------- */
+/* Import  des fichiers de couleurs et de typographie */
+@import './colors.css';
+@import './typography.css';
+@import './spacings.css';
+@import './layout.css';
+@import './custom.css';

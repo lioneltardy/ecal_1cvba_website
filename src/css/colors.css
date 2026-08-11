@@ -1,0 +1,28 @@
+/*
+ * Définition des couleurs et des classes de couleurs
+ *
+ * Convention de nommage: `color-*` pour la couleur du texte, `bg-*` pour la couleur de fond.
+ * Exemple: `.color-primary` pour `color: var(--color-primary);`, `.bg-black` pour `background-color: var(--color-black);`
+ */
+
+ :root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-primary: #ffb300;
+}
+
+.color-primary {
+  color: var(--color-primary);
+}
+
+.color-white {
+  color: var(--color-white);
+}
+
+.text-white {
+  color: var(--color-white);
+}
+
+.bg-black {
+  background-color: var(--color-black);
+}

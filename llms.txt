@@ -12,9 +12,12 @@ Le site a été **conçu au préalable dans Figma** (maquette graphique complèt
 
 - **Zéro JavaScript.** Toutes les interactions et animations se font en CSS pur : transitions, animations CSS, scroll-snap, `@keyframes`, `:hover`, `:focus`. Ne jamais proposer de JS même si c'est plus simple.
 - **Zéro framework externe.** Ne pas importer Tailwind, Bootstrap, GSAP, ScrollMagic, Alpine.js, React ou toute autre librairie. Le projet utilise uniquement le framework CSS fourni.
-- **Vanilla HTML/CSS uniquement.** Un seul fichier HTML (`index.html`), un fichier CSS personnalisé (`src/css/style.css`), le framework CSS fourni.
-- **Ne pas modifier les fichiers du framework.** Les fichiers `reset.css`, `variables.css`, `layout.css`, `typography.css` et `framework.css` sont en lecture seule. Toute personnalisation se fait dans `src/css/style.css`.
-- **Utiliser d'abord les classes utilitaires du framework.** Avant d'écrire du CSS personnalisé, appliquer au maximum les classes existantes dans le HTML (`d-flex`, `text-large`, `gap-*`, etc.). N'ajouter dans `style.css` que les règles spéciales absentes du framework.
+- **Vanilla HTML/CSS uniquement.** Un seul fichier HTML (`index.html`), un point d'entrée CSS (`src/css/style.css`) qui importe le framework et le fichier CSS personnalisé (`src/css/custom.css`).
+- **Utiliser d'abord les classes utilitaires.** Avant d'écrire du CSS personnalisé, appliquer au maximum les classes existantes dans le HTML.
+- **Privilégier la structure du framework plutôt que les dimensions brutes de Figma.** Utiliser en priorité `container`, `mx-auto` et les classes `col-*` pour construire la mise en page. Les largeurs fixes issues de Figma ne doivent être utilisées qu'en dernier recours.
+- **Ne jamais prendre d'initiative hors de la demande explicite de l'étudiant·e.** L'IA attend une instruction claire avant d'ajouter, corriger ou refactoriser du code.
+- **Ne pas ajouter des attributs  `aria-*` pour l'accessibilité.** Les éléments interactifs doivent être accessibles au clavier et aux lecteurs d'écran.
+- **Ne pas créer des déclinaisons responsives.** Le site est conçu pour un affichage **desktop** uniquement (écran ≥ 1440px). Ne pas créer de media queries pour les tablettes ou mobiles, sauf si l'étudiant·e le demande explicitement.
 
 ---
 
@@ -24,22 +27,18 @@ Le site a été **conçu au préalable dans Figma** (maquette graphique complèt
 /
 ├── index.html              ← Page unique du site (ne pas créer d'autres .html)
 ├── src/
-│   ├── css/
-│   │   ├── framework.css   ← Point d'entrée CSS (importe tout le framework)
-│   │   ├── variables.css   ← Custom properties : couleurs, espacements, typo
-│   │   ├── reset.css       ← Reset navigateur
-│   │   ├── typography.css  ← Styles texte de base
-│   │   ├── layout.css      ← Classes utilitaires flex/grid/spacing
-│   │   └── style.css       ← CSS personnalisé de l'étudiant·e (éditer ici)
-└── assets/
-    ├── images/             ← Images du film (jpg, webp, png, svg)
-    ├── audio/              ← Extraits audio (mp3)
-    └── fonts/              ← Polices locales (woff2)
+    ├── css/
+    │   ├── style.css       ← Point d'entrée CSS (importe tout le framework)
+    │   ├── reset.css       ← Reset navigateur
+    │   ├── colors.css      ← Variables de couleurs et classes utilitaires
+    │   ├── typography.css  ← Styles typographiques et classes utilitaires
+    │   ├── spacings.css    ← Classes utilitaires pour les espacements (margins/paddings)
+    │   └── layout.css      ← Style des éléments de layout (containers, flex, grid, sections) et CSS personnalisé de l'étudiant·e
+    └── images/             ← SVG et autres images locales intégrées au HTML/CSS
 ```
 
-Les deux fichiers CSS à lier dans `index.html` :
+Le fichier CSS à lier dans `index.html` :
 ```html
-<link rel="stylesheet" href="src/css/framework.css">
 <link rel="stylesheet" href="src/css/style.css">
 ```
 
@@ -47,186 +46,19 @@ Les deux fichiers CSS à lier dans `index.html` :
 
 ## Le framework CSS
 
-### Variables disponibles (dans variables.css)
+Pour les éléments de base (typographie, couleurs, espacement), le projet utilise des classes utilitaires définies dans les fichiers CSS du framework (`colors.css`, `typography.css`, `spacings.css`, `layout.css`). Ces fichiers peuvent être complétés par l’étudiant·e ou par l’IA.
 
-**Couleurs :**
-- `--color-white` (#fff)
-- `--color-black` (#000)
-- `--color-bg` (fond de page — blanc par défaut)
-- `--color-text` (texte principal — noir par défaut)
-- `--color-accent` (couleur d'accent — rouge par défaut)
+Pour autres propriétés CSS (bordures, flex, grid, positionnement, etc.), l’étudiant·e et l’IA utilise des règles CSS personnalisées dans `custom.css`, soit en utilisant des identifiants (`#id`) ou des classes (`.class`).
 
-Pour personnaliser, **redéclarer les variables dans `:root {}` dans `style.css`**, pas dans les fichiers du framework.
+Si une propriété relève clairement de la typographie, de l'espacement ou du layout, l'IA doit d'abord créer ou réutiliser une **classe utilitaire** dans le bon fichier du framework (`typography.css`, `spacings.css`, `layout.css`) plutôt que d'ajouter une classe custom dédiée.
 
-**Typographie — familles :**
-- `--font-display` (titres)
-- `--font-body` (corps de texte)
+L'IA doit éviter d'ajouter des classes custom sans responsabilité claire. Si un comportement est déjà couvert par le reset du projet ou par le comportement par défaut du navigateur (par exemple `margin: 0` sur les titres et paragraphes, ou `width: 100%` sur un bloc qui l'occupe déjà naturellement), il ne faut pas le redéfinir inutilement.
 
-**Typographie — tailles (en px) :**
-- `--text-smaller` (12px) — micro-texte, crédits
-- `--text-small` (14px) — captions, notes
-- `--text-regular` (16px) — corps de texte
-- `--text-medium` (18px) — corps large, intro
-- `--text-large` (24px) — sous-titres
-- `--text-larger` (32px) — titres de section
-- `--text-xtra-large` (64px) — grands titres, display
+Quand cela rend le code plus lisible pour des débutant·es, l'IA privilégie un élément HTML explicite plutôt qu'un pseudo-élément CSS (`::before`, `::after`).
 
-**Typographie — interlignage :**
-- `--line-height-tight` (1.1) — titres
-- `--line-height-body` (1.25) — corps de texte
-- `--line-height-loose` (2) — texte aéré
+Les noms de classes utilitaires doivent rester pédagogiques et explicites. Par exemple, préférer `text-right` à `text-end` si cela semble plus clair pour des étudiant·es débutant·es.
 
-**Espacement (valeurs en px, multiples de 4) :**
-- `--space-4` (4px)
-- `--space-8` (8px)
-- `--space-12` (12px)
-- `--space-16` (16px)
-- `--space-24` (24px)
-- `--space-32` (32px)
-- `--space-48` (48px)
-- `--space-64` (64px)
-- `--space-96` (96px)
-- `--space-128` (128px)
-
-**Layout :**
-- `--container-width` (1320px) — largeur maximale du conteneur
-- `--section-min-height` (100svh) — hauteur minimale d'une section plein écran
-
----
-
-### Classes utilitaires disponibles (dans layout.css)
-
-**Conteneurs :**
-- `.container` — centré, max-width 1320px, padding horizontal 32px
-- `.container-fluid` — pleine largeur avec padding horizontal
-
-**Sections :**
-- `.section` — bloc de section (position: relative, width: 100%)
-
-**Flexbox :**
-- `.d-flex` — display: flex
-- `.flex-col` — flex-direction: column
-- `.flex-wrap` / `.flex-nowrap`
-- Alignement principal : `.justify-start`, `.justify-end`, `.justify-center`, `.justify-between`, `.justify-around`, `.justify-evenly`
-- Alignement croisé : `.items-start`, `.items-end`, `.items-center`, `.items-baseline`, `.items-stretch`
-- Taille : `.flex-1`, `.flex-none`, `.flex-auto`
-
-**Colonnes (système basé sur 12 colonnes) :**
-- `.columns-6-6` — deux colonnes égales (50% / 50%)
-- `.columns-4-4-4` — trois colonnes égales (33% / 33% / 33%)
-- `.columns-4-8` — petite / grande (33% / 66%)
-- `.columns-8-4` — grande / petite (66% / 33%)
-- `.columns-3-3-6` — deux petites / grande (25% / 25% / 50%)
-- `.columns-6-3-3` — grande / deux petites (50% / 25% / 25%)
-- `.columns-3-9` — très petite / très grande (25% / 75%)
-- `.columns-9-3` — très grande / très petite (75% / 25%)
-
-Toutes les classes `.columns-*` créent un `display: grid`. Combiner avec `.gap-*` pour l'espacement.
-
-**Gap (espacement entre éléments flex/grid) :**
-`.gap-4`, `.gap-8`, `.gap-12`, `.gap-16`, `.gap-24`, `.gap-32`, `.gap-48`, `.gap-64`, `.gap-96`, `.gap-128`
-
-**Positionnement :**
-- `.position-relative`, `.position-absolute`, `.position-fixed`, `.position-sticky`
-- `.top-0`, `.bottom-0`, `.left-0`, `.right-0`
-- Z-index : `.z-0`, `.z-10`, `.z-20`, `.z-nav` (z-index: 100)
-
-**Dimensions :**
-- `.w-100` (width: 100%), `.w-50` (width: 50%), `.w-fit` (width: fit-content)
-- `.h-100` (height: 100%), `.h-50` (height: 50%), `.h-fit` (height: fit-content)
-- `.h-screen` (height: 100svh), `.min-h-screen` (min-height: 100svh)
-- Ratios : `.ratio-16-9`, `.ratio-4-3`, `.ratio-1-1`, `.ratio-2-3`, `.ratio-3-2`
-
-**Overflow :** `.overflow-hidden`, `.overflow-x-hidden`
-
-**Padding (espacement interne) :**
-- Tous côtés : `.p-0`, `.p-4`, `.p-8`, `.p-12`, `.p-16`, `.p-24`, `.p-32`, `.p-48`, `.p-64`, `.p-96`, `.p-128`
-- Horizontal : `.px-0`, `.px-4`, `.px-8`, `.px-12`, `.px-16`, `.px-24`, `.px-32`, `.px-48`, `.px-64`, `.px-96`, `.px-128`
-- Vertical : `.py-0`, `.py-4`, `.py-8`, `.py-12`, `.py-16`, `.py-24`, `.py-32`, `.py-48`, `.py-64`, `.py-96`, `.py-128`
-- Par côté : `.pt-*`, `.pb-*`, `.pl-*`, `.pr-*` (mêmes valeurs)
-
-**Margin (espacement externe) :**
-- `.m-0`, `.m-auto`, `.mx-auto`
-- Tous côtés : `.m-4` → `.m-128`
-- Horizontal : `.mx-0` → `.mx-128`
-- Vertical : `.my-0` → `.my-128`
-- Par côté : `.mt-*`, `.mb-*`, `.ml-*`, `.mr-*` (mêmes valeurs)
-
-**Affichage :**
-- `.d-block`, `.d-inline-block`, `.d-inline`, `.d-none`
-
-**Backgrounds :**
-- `.bg-black`, `.bg-white`, `.bg-accent`
-- `.bg-cover` — background-size: cover + background-position: center
-
----
-
-### Classes typographiques disponibles (dans typography.css)
-
-**Hiérarchie des titres (styles automatiques) :**
-- `h1` → `--text-xtra-large` (64px), font-display
-- `h2` → `--text-larger` (32px), font-display
-- `h3` → `--text-large` (24px), font-display
-- `h4` → `--text-medium` (18px), font-display
-
-**Composants typographiques :**
-- `.lead` — texte d'introduction (24px, max-width 55ch)
-- `.caption` — légende sous image (14px, letter-spacing 0.04em)
-- `.label` — étiquette / tag (14px, uppercase, letter-spacing 0.15em)
-- `.display` — typographie décorative (64px, line-height 0.9)
-- `.data-list` — liste clé/valeur en grille (pour la fiche technique, utiliser `<dl>`)
-
-**Utilitaires texte :**
-- Couleur : `.text-white`, `.text-black`, `.text-accent`
-- Alignement : `.text-left`, `.text-center`, `.text-right`
-- Style : `.text-upper`, `.text-italic`, `.text-bold`
-
-**Liens :**
-- Par défaut : pas de décoration, hérite de la couleur parente
-- Au survol : `color: var(--color-accent)`
-
----
-
-## Sections du projet
-
-Le site est oganisé en sections verticales, chacune correspondant à une partie de la maquette Figma. Chaque section a un `id` unique qui sert d'ancre pour la navigation.
-
----
-
-## Conventions de code
-
-- **HTML sémantique :** utiliser les balises appropriées (`<section>`, `<article>`, `<figure>`, `<figcaption>`, `<nav>`, `<footer>`, `<dl>`, `<dt>`, `<dd>`, `<blockquote>`, `<cite>`)
-- **Variables CSS :** toujours utiliser les variables `--space-*` pour les espacements, ou les classes liées (p-*, mx-*, etc.), jamais de valeurs brutes comme `margin: 24px`
-- **Priorité aux classes utilitaires :** avant d'écrire du CSS personnalisé, utiliser au maximum les classes déjà disponibles dans le framework (`d-flex`, `text-large`, `gap-*`, etc.) directement dans le HTML
-- **CSS personnalisé minimal :** n'ajouter dans `style.css` que les règles spéciales absentes du framework (ex: effets spécifiques, exceptions de layout, ajustements liés à la maquette)
-- **Pas de redondance utilitaire/CSS :** ne pas réécrire en CSS une règle déjà exprimable avec une classe utilitaire existante
-- **Commentaires :** commenter chaque bloc CSS avec le nom de la section concernée
-- **Styles inline :** éviter les `style=""` dans le HTML sauf cas exceptionnel justifié
-
----
-
-## Animations CSS autorisées (sans JS)
-
-**Techniques disponibles :**
-- Transitions sur `:hover`, `:focus`, `:active`
-- `@keyframes` et `animation`
-- `animation-timeline: view()` (CSS Scroll-driven Animations — Chrome/Edge uniquement)
-- `scroll-snap-type` / `scroll-snap-align`
-- `clip-path`, `mask`, `filter` en transition
-
-**Exemple — apparition au scroll (CSS pur) :**
-```css
-.reveal {
-  animation: fadeInUp linear both;
-  animation-timeline: view();
-  animation-range: entry 0% entry 30%;
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-```
+L’IA peut proposer des classes utilitaires supplémentaires si nécessaire. Elle doit les ajouter dans le fichier CSS correspondant (par exemple, une nouvelle classe de couleur dans `colors.css`, une nouvelle classe de typographie dans `typography.css`, etc.) en respectant les conventions de nommage mentionnée dans le fichier. Elle doit impérativement **indiquer dans sa réponse le fichier CSS où la classe doit être ajoutée**. 
 
 ---
 
@@ -234,11 +66,10 @@ Le site est oganisé en sections verticales, chacune correspondant à une partie
 
 - Proposer du JavaScript — même pour des effets qui seraient plus simples à faire en JS
 - Modifier le design (couleurs, typographie, mise en page) sans instruction explicite de l'étudiant·e — le design vient de la maquette Figma
+- Ajouter des classes custom inutiles, redondantes ou sans rôle clair
+- Remplacer des classes utilitaires existantes par du CSS custom sans raison
 - Importer des librairies externes (npm, CDN, etc.)
 - Créer de nouveaux fichiers HTML
-- Modifier les fichiers du framework (`reset.css`, `variables.css`, `layout.css`, `typography.css`, `framework.css`)
-- Utiliser des valeurs d'espacement brutes — toujours utiliser les variables `--space-*`
-- Inventer des classes qui n'existent pas dans le framework — utiliser uniquement celles listées dans ce fichier
 - Proposer des solutions impliquant un framework JS (Next.js, Astro, Vue, React, etc.)
 
 ---
@@ -247,11 +78,6 @@ Le site est oganisé en sections verticales, chacune correspondant à une partie
 
 1. L'étudiant·e décrit ce qu'il·elle veut reproduire de sa maquette Figma
 2. L'IA propose du code HTML/CSS en utilisant exclusivement les classes du framework listées ici
-3. Le code est intégré dans `index.html` et/ou `src/css/style.css`
+3. Le code est intégré dans `index.html` et/ou `src/css/custom.css` ; les nouvelles utilitaires sont ajoutées dans le fichier du framework approprié
 4. Le résultat est vérifié dans le navigateur via `npm run dev` (Vite)
 5. L'étudiant·e itère avec l'IA jusqu'à ce que le résultat corresponde à la maquette
-
----
-
-*ECAL — École cantonale d'art de Lausanne — Cours de webdesign 2026–2027*
-*Enseignant : Lionel Tardy (lionel.tardy@ecal.ch)*

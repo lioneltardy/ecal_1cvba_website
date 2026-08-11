@@ -1,0 +1,48 @@
+/*
+ * Définition des espacements et des classes d'espacements
+ *
+ * Convention de nommage : `m` pour margin, `p` pour padding, suivi de la direction (`t`, `b`, `l`, `r`, `x`, `y`) et de la valeur en pixels.
+ * Exemple : `.mt-16` pour `margin-top: 16px;`, `.px-32` pour `padding-left: 32px; padding-right: 32px;
+ */
+
+.mx-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.pt-32 {
+  padding-top: 32px;
+}
+
+.py-16 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.py-32 {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.px-64 {
+  padding-right: 64px;
+  padding-left: 64px;
+}
+
+.py-64 {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.py-128 {
+  padding-top: 128px;
+  padding-bottom: 128px;
+}
