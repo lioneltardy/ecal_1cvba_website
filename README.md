@@ -4,16 +4,19 @@ Réalisation d'un site scrollytelling présentant un film. Le site est conçu da
 
 ---
 
+## Installation et mise en route
+
+- [Installation et mise en route](./docs/vscode.md) — VS Code, Node.js, GitHub, Vite, Copilot, MCP Figma
+
 ## Documentation
 
 ### Design
 - [Figma](./docs/figma.md) — Installation, compte Education, prise en main, Dev Mode
 
-### Réalisation technique
-- [Installation et mise en route](./docs/vscode.md) — VS Code, Node.js, GitHub, Vite, Copilot, MCP Figma
-
 ### Références techniques
 - [Introduction au HTML](./docs/html.md) — Balises, structure, éléments essentiels pour ce projet
+
+- [Introduction aux CSS](./docs/css.md) — Sélecteurs, propriétés, mise en page, animations, transitions (à venir)
 
 ---
 

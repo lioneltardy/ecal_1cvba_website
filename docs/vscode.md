@@ -90,6 +90,12 @@ Télécharger le projet depuis GitHub sous forme d'archive ZIP.
 
 ## Étape 5 — Lancer Vite
 
+<br>
+
+<img src="./img/vscode-run.gif" alt="Vite run" width="100%">
+
+<br>
+
 Vite recharge automatiquement le navigateur à chaque sauvegarde de fichier.
 
 1. Dans VS Code, ouvrir le terminal intégré : **View → Terminal** (ou `` Ctrl+` `` / `` Cmd+` ``)
