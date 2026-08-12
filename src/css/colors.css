@@ -11,18 +11,26 @@
   --color-primary: #ffb300;
 }
 
-.color-primary {
-  color: var(--color-primary);
+.color-black {
+  color: var(--color-black);
 }
 
 .color-white {
   color: var(--color-white);
 }
 
-.text-white {
-  color: var(--color-white);
+.color-primary {
+  color: var(--color-primary);
 }
 
 .bg-black {
   background-color: var(--color-black);
+}
+
+.bg-white {
+  background-color: var(--color-white);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
 }
