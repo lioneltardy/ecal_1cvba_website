@@ -9,31 +9,10 @@
 body {
   font-size: 18px;
   line-height: 1.25;
-  font-family: 'Mozilla Text', sans-serif;
+  font-family: sans-serif;
 }
 
-/* Titres et sous-titres */
-.font-headline {
-  font-family: 'Mozilla Headline', sans-serif;
-}
-
-/* Styles des textes */
-.text-lead {
-  font-size: 24px;
-  line-height: 1.5;
-}
-
-.text-title-2 {
-  font-size: 24px;
-  line-height: 1.25;
-  text-transform: uppercase;
-}
-
-.text-title-1 {
-  font-size: 48px;
-  line-height: 1.25;
-}
-
+/* Utilitaires de typographie */
 .text-uppercase {
   text-transform: uppercase;
 }

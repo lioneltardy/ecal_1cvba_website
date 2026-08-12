@@ -2,6 +2,8 @@
 
 Réalisation d'un site scrollytelling présentant un film. Le site est conçu dans Figma, puis réalisé en HTML/CSS avec l'assistance de l’intelligence artificielle.
 
+[Voir le dépôt de code de démonstration](https://github.com/lioneltardy/ecal_1cvba_website_demo)
+
 ---
 
 ## Installation et mise en route
