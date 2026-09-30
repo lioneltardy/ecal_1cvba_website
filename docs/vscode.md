@@ -25,27 +25,19 @@ VS Code est l'éditeur de code utilisé pour tout le projet.
 
 ---
 
-## Étape 2 — Installer Node.js
+## Étape 2 — Installer Live Server
 
-Node.js est nécessaire pour faire tourner Vite, l'outil qui recharge le navigateur automatiquement à chaque modification du code.
+<br>
 
-1. Aller sur [nodejs.org](https://nodejs.org)
-2. Télécharger la version **LTS** (Long Term Support) — bouton de gauche
-3. Installer avec tous les paramètres par défaut
+<img src="./img/live-server-install.png" alt="Install Live Server" width="100%">
 
-**Vérifier que ça marche :**
+<br>
 
-Ouvrir le Terminal (macOS) ou l'Invite de commandes (Windows) et taper :
+Live Server est une extension de VS Code qui crée un serveur local permettant de visualiser votre site dans un navigateur.
 
-```
-node --version
-```
-
-Un numéro de version doit s'afficher, par exemple `v20.11.0`. Si un message d'erreur apparaît, réinstaller Node.js.
-
-> **Trouver le Terminal :**
-> macOS : `Cmd + Espace`, taper "Terminal", appuyer sur Entrée.
-> Windows : `Win + R`, taper `cmd`, appuyer sur Entrée.
+1. Dans VS Code, ouvrir l'onglet Extensions (Barre d’outil à gauche) (`Cmd+Shift+X` / `Ctrl+Shift+X`)
+2. Rechercher "Live Server"
+3. Cliquer sur **Install** pour installer l'extension
 
 ---
 
@@ -88,63 +80,21 @@ Télécharger le projet depuis GitHub sous forme d'archive ZIP.
 
 ---
 
-## Étape 5 — Lancer Vite
+## Étape 5 — Lancer le serveur local
 
 <br>
 
-<img src="./img/vscode-run.gif" alt="Vite run" width="100%">
+<img src="./img/live-server-launch.png" alt="Run Live Server" width="100%">
 
 <br>
 
-Vite recharge automatiquement le navigateur à chaque sauvegarde de fichier.
+Cliquer sur le bouton **Go Live** en bas à droite de VS Code pour lancer le serveur local. Le navigateur s'ouvre automatiquement sur la page du projet.
 
-1. Dans VS Code, ouvrir le terminal intégré : **View → Terminal** (ou `` Ctrl+` `` / `` Cmd+` ``)
-2. Installer les dépendances du projet (à faire une seule fois) :
-   ```
-   npm install
-   ```
-   Des lignes défilent pendant quelques secondes — c'est normal.
-
-3. Lancer le serveur de développement :
-   ```
-   npm run dev
-   ```
-
-4. Vite affiche une adresse locale :
-   ```
-   Local:   http://localhost:5173/
-   ```
-
-5. Ouvrir cette adresse dans le navigateur — la page du projet doit s'afficher.
-
-**À partir de maintenant :** chaque sauvegarde (`Cmd+S` / `Ctrl+S`) met à jour le navigateur automatiquement.
-
-> **Arrêter Vite :** taper `Ctrl+C` dans le terminal.
-> **Relancer Vite :** retaper `npm run dev`.
+**À partir de maintenant :** chaque sauvegarde (`Cmd+S` / `Ctrl+S`) du fichier `index.html` met à jour le navigateur automatiquement.
 
 ---
 
-## Étape 6 — Installer les extensions VS Code
-
-Ouvrir l'onglet Extensions (`Cmd+Shift+X` / `Ctrl+Shift+X`) et installer :
-
-### GitHub Copilot
-
-1. Rechercher "GitHub Copilot"
-2. Installer l'extension officielle de GitHub
-3. VS Code demande de se connecter au compte GitHub — cliquer sur "Sign in"
-4. Si GitHub Education est validé, Copilot s'active automatiquement
-
-### GitHub Copilot Chat
-
-1. Rechercher "GitHub Copilot Chat"
-2. Installer l'extension (souvent installée automatiquement avec Copilot)
-
-> Ces deux extensions sont liées — Copilot pour les suggestions inline, Copilot Chat pour le dialogue en langage naturel.
-
----
-
-## Étape 7 — Connecter Figma à Copilot (MCP Figma)
+## Étape 6 — Connecter Figma à Copilot (MCP Figma)
 
 Le MCP Figma permet à Copilot de lire directement la maquette et de générer du code qui correspond au design.
 
@@ -168,7 +118,7 @@ C'est tout. Pas de fichier à modifier, pas de configuration manuelle.
 
 ---
 
-## Étape 8 — Comprendre la structure du projet
+## Étape 7 — Comprendre la structure du projet
 
 Avant de commencer à coder, prendre 5 minutes pour explorer les fichiers :
 
@@ -194,7 +144,7 @@ Avant de commencer à coder, prendre 5 minutes pour explorer les fichiers :
 
 ### Comment Copilot connaît le projet
 
-Le fichier `llms.txt` à la racine du projet contient toutes les instructions pour Copilot : les classes CSS disponibles, les règles à respecter, la structure attendue. Copilot le lit automatiquement. Il est recommandé, à chaque début de session de travail avec l’IA, de lui rappeler de consulter le contenu de ce fichier pour s'assurer qu'elle suit les bonnes règles.
+Le fichier `AGENTS.md` à la racine du projet contient toutes les instructions pour Copilot : les classes CSS disponibles, les règles à respecter, la structure attendue. Copilot le lit automatiquement. Il est recommandé, à chaque début de session de travail avec l’IA, de lui rappeler de consulter le contenu de ce fichier pour s'assurer qu'elle suit les bonnes règles.
 
 ### Workflow avec la maquette Figma
 
@@ -222,12 +172,6 @@ Copilot peut se tromper ou s'écarter du framework. Toujours vérifier que le co
 ---
 
 ## En cas de problème
-
-**Le terminal affiche une erreur en rouge :** lire le message — il indique souvent exactement ce qui ne va pas. Copier-coller le message dans Copilot Chat.
-
-**Vite ne se lance pas :** vérifier que le terminal est bien ouvert dans le dossier du projet. Le chemin doit se terminer par `/ecal_1cvba_website`.
-
-**Le navigateur n'affiche pas les modifications :** vérifier que Vite tourne toujours dans le terminal. Si ce n'est pas le cas, relancer avec `npm run dev`.
 
 **Copilot ne répond pas :** vérifier que la connexion au compte GitHub est active — icône de profil en bas à gauche de VS Code.
 

@@ -8,7 +8,7 @@ Réalisation d'un site scrollytelling présentant un film. Le site est conçu da
 
 ## Installation et mise en route
 
-- [Installation et mise en route](./docs/vscode.md) — VS Code, Node.js, GitHub, Vite, Copilot, MCP Figma
+- [Installation et mise en route](./docs/vscode.md) — VS Code, GitHub, Copilot, MCP Figma
 
 ## Documentation
 
@@ -26,7 +26,6 @@ Réalisation d'un site scrollytelling présentant un film. Le site est conçu da
 
 ```
 /
-├–– dist/              ← Dossier généré par Vite, ne pas modifier
 ├── docs/              ← Documentation du cours
 ├–– node_modules/      ← Dossier généré par npm, ne pas modifier
 ├── src/               ← **Dossier source du projet**

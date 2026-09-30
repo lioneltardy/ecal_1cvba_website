@@ -58,7 +58,7 @@ Quand cela rend le code plus lisible pour des débutant·es, l'IA privilégie un
 
 Les noms de classes utilitaires doivent rester pédagogiques et explicites. Par exemple, préférer `text-right` à `text-end` si cela semble plus clair pour des étudiant·es débutant·es.
 
-L’IA peut proposer des classes utilitaires supplémentaires si nécessaire. Elle doit les ajouter dans le fichier CSS correspondant (par exemple, une nouvelle classe de couleur dans `colors.css`, une nouvelle classe de typographie dans `typography.css`, etc.) en respectant les conventions de nommage mentionnée dans le fichier. Elle doit impérativement **indiquer dans sa réponse le fichier CSS où la classe doit être ajoutée**. 
+L’IA peut proposer des classes utilitaires supplémentaires si nécessaire. Elle doit les ajouter dans le fichier CSS correspondant (par exemple, une nouvelle classe de couleur dans `colors.css`, une nouvelle classe de typographie dans `typography.css`, etc.) en respectant les conventions de nommage mentionnée dans le fichier. Elle doit impérativement **indiquer dans sa réponse le fichier CSS où la classe doit être ajoutée**.
 
 ---
 
@@ -79,5 +79,5 @@ L’IA peut proposer des classes utilitaires supplémentaires si nécessaire. El
 1. L'étudiant·e décrit ce qu'il·elle veut reproduire de sa maquette Figma
 2. L'IA propose du code HTML/CSS en utilisant exclusivement les classes du framework listées ici
 3. Le code est intégré dans `index.html` et/ou `src/css/custom.css` ; les nouvelles utilitaires sont ajoutées dans le fichier du framework approprié
-4. Le résultat est vérifié dans le navigateur via `npm run dev` (Vite)
+4. Le résultat est vérifié dans le navigateur via le Live Server de VS Code
 5. L'étudiant·e itère avec l'IA jusqu'à ce que le résultat corresponde à la maquette
