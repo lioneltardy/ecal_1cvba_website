@@ -10,7 +10,7 @@ Le site a été **conçu au préalable dans Figma** (maquette graphique complèt
 
 ## Règles absolues — ne jamais enfreindre
 
-- **Zéro JavaScript.** Toutes les interactions et animations se font en CSS pur : transitions, animations CSS, scroll-snap, `@keyframes`, `:hover`, `:focus`. Ne jamais proposer de JS même si c'est plus simple.
+- **JavaScript.** Minimiser l'usage du JavaScript. Les animations se font en CSS pur : transitions, animations CSS, scroll-snap, `@keyframes`, `:hover`, `:focus`. Proposer du JavaScript uniquement pour les interactions qui ne peuvent pas être réalisées en CSS pur (exemple : un menu hamburger qui ouvre un menu déroulant, ScrollTo animé, effet d'apparition ou de séquence).
 - **Zéro framework externe.** Ne pas importer Tailwind, Bootstrap, GSAP, ScrollMagic, Alpine.js, React ou toute autre librairie. Le projet utilise uniquement le framework CSS fourni.
 - **Vanilla HTML/CSS uniquement.** Un seul fichier HTML (`index.html`), un point d'entrée CSS (`src/css/style.css`) qui importe le framework et le fichier CSS personnalisé (`src/css/custom.css`).
 - **Utiliser d'abord les classes utilitaires.** Avant d'écrire du CSS personnalisé, appliquer au maximum les classes existantes dans le HTML.
@@ -64,7 +64,6 @@ L’IA peut proposer des classes utilitaires supplémentaires si nécessaire. El
 
 ## Ce que l'IA NE doit PAS faire
 
-- Proposer du JavaScript — même pour des effets qui seraient plus simples à faire en JS
 - Modifier le design (couleurs, typographie, mise en page) sans instruction explicite de l'étudiant·e — le design vient de la maquette Figma
 - Ajouter des classes custom inutiles, redondantes ou sans rôle clair
 - Remplacer des classes utilitaires existantes par du CSS custom sans raison
